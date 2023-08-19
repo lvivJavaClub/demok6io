@@ -1,0 +1,151 @@
+{
+    "configurations": [
+        {
+            "type": "command",
+            "name": "install k6",
+            "program": "brew",
+            "args": [
+                "install",
+                "k6"
+            ],
+        },
+        {
+            "type": "command",
+            "name": "run demo-01-simple-exampl",
+            "program": "k6",
+            "args": [
+                "run",
+                "demo-01-simple-example.js"
+            ],
+        },
+        {
+            "type": "command",
+            "name": "run demo-01-simple-exampl with 10 users",
+            "program": "k6",
+            "args": [
+                "run",
+                "--vus", "10",
+                "--duration", "10s",
+                "demo-01-simple-example.js"
+            ],
+        },
+        {
+            "type": "command",
+            "name": "run demo-02-configuration",
+            "program": "k6",
+            "args": [
+                "run",
+                "demo-02-configuration.js"
+            ],
+        },
+        {
+            "type": "command",
+            "name": "run demo-03-stages",
+            "program": "k6",
+            "args": [
+                "run",
+                "demo-03-stages.js"
+            ],
+        },
+        {
+            "type": "command",
+            "name": "run demo-04-check",
+            "program": "k6",
+            "args": [
+                "run",
+                "demo-04-check.js"
+            ],
+        },
+        {
+            "type": "command",
+            "name": "run demo-05-post",
+            "program": "k6",
+            "args": [
+                "run",
+                "demo-05-post.js"
+            ],
+        },
+        {
+            "type": "command",
+            "name": "run demo-06-metric",
+            "program": "k6",
+            "args": [
+                "run",
+                "demo-06-metric.js"
+            ],
+        },
+        {
+            "type": "command",
+            "name": "run demo-07-counter",
+            "program": "k6",
+            "args": [
+                "run",
+                "demo-07-counter.js"
+            ],
+        },
+        {
+            "type": "command",
+            "name": "run demo-08-thresholds",
+            "program": "k6",
+            "args": [
+                "run",
+                "demo-08-thresholds.js"
+            ],
+        },
+        {
+            "type": "command",
+            "name": "run demo-09-test",
+            "program": "k6",
+            "args": [
+                "run",
+                "demo-09-test.js"
+            ],
+        },
+        {
+            "type": "command",
+            "name": "run demo-10-tags-and-group",
+            "program": "k6",
+            "args": [
+                "run",
+                "--out", "csv=test_results.csv",
+                "demo-10-tags-and-group.js"
+            ],
+        },
+        {
+            "type": "command",
+            "name": "k6 status",
+            "program": "k6",
+            "args": [
+                "status"
+            ],
+        },
+        {
+            "type": "command",
+            "name": "k6 REST API",
+            "program": "curl",
+            "args": [
+                "-X",
+                "GET", "http://localhost:6565/v1/groups",
+                "-H", "'Content-Type: application/json'"
+            ],
+        },
+        {
+            "type": "command",
+            "name": "run demo-11-cloud",
+            "program": "k6",
+            "args": [
+                "cloud",
+                "demo-11-cloud.js"
+            ],
+        },
+        {
+            "type": "command",
+            "name": "run demo-12-result",
+            "program": "k6",
+            "args": [
+                "cloud",
+                "demo-12-result.js"
+            ],
+        },
+    ]
+}
